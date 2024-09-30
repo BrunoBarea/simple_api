@@ -7,7 +7,7 @@ Simple API code. Stateless. The state is saved in the session.
   
     Method: POST
     Parameters: none
-    Return: 200 []
+    Return: 205 []
     Description: used to reset to initial state
   
   URL: /accounts
