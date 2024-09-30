@@ -2,7 +2,9 @@
 Simple API code. Stateless. The state is saved in the session.
 
 @Routes
+
   URL: /reset
+  
     Method: POST
     Parameters: none
     Return: 200 []
