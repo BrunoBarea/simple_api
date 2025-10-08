@@ -1,0 +1,11 @@
+doctrine:
+    dbal:
+        profiling: true
+    orm:
+        auto_generate_proxy_classes: true
+        entity_managers:
+            default:
+                query_cache_driver:
+                    type: array
+                metadata_cache_driver:
+                    type: array

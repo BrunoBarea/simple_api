@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<phpunit xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:noNamespaceSchemaLocation="https://schema.phpunit.de/11.2/phpunit.xsd"
+         bootstrap="tests/bootstrap.php"
+         colors="true"
+         beStrictAboutTestsThatDoNotTestAnything="false"
+         beStrictAboutTodoAnnotatedTests="false"
+>
+    <testsuites>
+        <testsuite name="Project Test Suite">
+            <directory>tests</directory>
+        </testsuite>
+    </testsuites>
+    <php>
+        <ini name="error_reporting" value="-1"/>
+        <server name="APP_ENV" value="test"/>
+        <server name="SHELL_VERBOSITY" value="-1"/>
+        <server name="APP_DEBUG" value="0"/>
+        <env name="DATABASE_URL" value="postgresql://app_user:app_password@127.0.0.1:5432/app_database_test?serverVersion=16&amp;charset=utf8"/>
+    </php>
+</phpunit>

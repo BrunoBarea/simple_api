@@ -1,34 +1,43 @@
-# simple_api
-Simple API code. Stateless. The state is saved in the session.
+# Simple API (Symfony 7)
 
-@Routes
+This repository contains a fresh [Symfony](https://symfony.com/) 7 skeleton configured for building APIs with Doctrine ORM and PostgreSQL.
 
-  URL: /reset
-  
-    Method: POST
-    Parameters: none
-    Return: 205 []
-    Description: used to reset to initial state
-  
-  URL: /accounts
-  
-    Method: GET
-    Parameters: none
-    Return: 200 [{"number": 1}, {"number": 2},{"number": 3}...]
-            404 []
-          
-    Method: POST
-    Parameters: {"balance": 25.50}
-    Return: 201 {"number": 1}
-  
-  
-  URL: /account/{number}
-  
-    Method: GET
-    Parameters: []
-    Return: 200 {"number": 1, "balance": 25.50}
-            404 []
-          
-    Method: PATCH
-    Parameters: {"balance": 30.55}
-    Return: 201 {"number": 1, "balance": 30.55}
+## Getting started
+
+1. Install PHP 8.2 or higher with the required extensions (`ctype`, `iconv`, `pdo_pgsql`).
+2. Install Composer dependencies:
+
+   ```bash
+   composer install
+   ```
+
+3. Configure your database credentials in an `.env.local` file:
+
+   ```dotenv
+   DATABASE_URL="postgresql://app_user:app_password@127.0.0.1:5432/app_database?serverVersion=16&charset=utf8"
+   ```
+
+4. Create the database schema:
+
+   ```bash
+   php bin/console doctrine:database:create
+   php bin/console doctrine:migrations:migrate
+   ```
+
+5. Start the development server:
+
+   ```bash
+   symfony server:start
+   ```
+
+The default route (`/`) returns a JSON response confirming that the application is running.
+
+## Testing
+
+Run the automated test suite with:
+
+```bash
+php bin/phpunit
+```
+
+Ensure you have configured the `DATABASE_URL` for the test environment (`.env.test` or environment variables).
