@@ -1,0 +1,12 @@
+.git
+.gitignore
+var/
+vendor/
+node_modules/
+.env.local
+.env.*.local
+Dockerfile
+docker-compose.yml
+phpunit.xml.dist
+.idea/
+.vscode/
