@@ -1,0 +1,13 @@
+# Symfony standard ignores
+/vendor/
+/var/
+/.env.local
+/.env.*.local
+/.phpunit.result.cache
+/phpunit.xml
+/build/
+/node_modules/
+/public/bundles/
+/.idea/
+/.vscode/
+.DS_Store

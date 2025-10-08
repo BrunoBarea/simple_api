@@ -1,0 +1,5 @@
+framework:
+    http_method_override: false
+    session:
+        cookie_secure: auto
+        cookie_samesite: lax
